@@ -1,0 +1,19 @@
+﻿@model IT_AV6_7_211189.Models.Client
+@{
+    ViewBag.Title = "ShowClient";
+}
+
+<h2>Client Info: </h2>
+@{ if (Model.Age > 18)
+    {
+        <p>Address: @Model.Address</p>
+        <p>Phone Number: @Model.PhoneNum</p>
+        <p>Age: @Model.Age</p>
+    }
+    else
+            {
+               <h4 style="color: red"> This client is under 18! The data is protected. </h4>
+            }
+}
+
+

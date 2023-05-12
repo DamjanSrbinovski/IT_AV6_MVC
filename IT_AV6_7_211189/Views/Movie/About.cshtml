@@ -1,0 +1,24 @@
+﻿@model IT_AV6_7_211189.Models.MovieRentals
+@{
+    ViewBag.Title = "About";
+}
+
+<h2>Movie: @Model.movie.Title</h2>
+<img src="@Model.movie.ImageURL" style="max-width: 200px; max-height: 200px;" />
+<h3>Rating: @Model.movie.Rating</h3>
+<hr />
+<br />
+<h4>MovieRentals:</h4>
+<ul>
+    @{
+        int i = 0;
+        foreach (var client in Model.clients)
+        {
+            <br />
+            <h5>Name: @client.Name</h5>
+            <a href="ShowClient/@i" style="text-decoration: none; color: darkcyan;">Show more details</a>
+            <br />
+            i++;
+        }
+    }
+</ul>
